@@ -1,0 +1,17 @@
+﻿@page "/uploadFile"
+@inherits MyUploadFileBase
+@using BlazorInputFile
+
+<h3>MyUploadFile</h3>
+<InputFile OnChange="HandleFileSelected" accept=".txt, .png, .jpg, .xls"></InputFile>
+
+@if (file != null)
+{
+    <span>File Name: @file.Name</span>
+    <br />
+    <span>Size: @file.Size</span>
+    <br />
+    <span>Type: @file.Type</span>
+}
+
+
